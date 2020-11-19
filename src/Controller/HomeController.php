@@ -9,6 +9,8 @@
 
 namespace App\Controller;
 
+use App\Model\WitchManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -21,6 +23,11 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $witchManager = new WitchManager();
+        $witches = $witchManager->selectAll();
+        $witches['GROUP_CONCAT(attribute.name)'] = explode(',', $witches['GROUP_CONCAT(attribute.name)']);
+        return $this->twig->render('Home/index.html.twig',[
+            'witches' => $witches,
+        ]);
     }
 }
