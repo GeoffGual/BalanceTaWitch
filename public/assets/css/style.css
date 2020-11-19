@@ -37,10 +37,6 @@
     -moz-transform: rotate(-45deg);
 }
 
-
-
-
-
 .image-area
 {
     display: flex;
@@ -124,7 +120,7 @@
 
 .img-wrapper ul li
 {
-    background: darkred;
+    background: crimson;
     height: 40px;
     width: 40px;
     text-align: center;
@@ -250,4 +246,9 @@ div.mep{
     width: 500px;
     margin-top: 150px;
     margin-bottom: 150px;
+}
+.rewards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
