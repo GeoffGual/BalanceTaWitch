@@ -54,6 +54,7 @@
     height: 400px;
     position: relative;
     overflow: hidden;
+    justify-content: space-between;
 }
 
 .img-wrapper:before
@@ -90,7 +91,7 @@
 
 .img-wrapper h2
 {
-    background: tomato;
+    background: black;
     font-family: Poppins;
     color: #fff;
     text-align: center;
@@ -102,7 +103,7 @@
     width: 100%;
     transform: perspective(400px) rotateY(90deg);
     transform-origin: right;
-    transition: 1s;
+
 }
 
 .img-wrapper:hover h2
@@ -123,7 +124,7 @@
 
 .img-wrapper ul li
 {
-    background: #333;
+    background: darkred;
     height: 40px;
     width: 40px;
     text-align: center;
@@ -138,25 +139,7 @@
     transform: perspective(800px) rotateY(0deg);
 }
 
-.img-wrapper:hover ul li:nth-child(1)
-{
-    transition-delay: .2s;
-}
 
-.img-wrapper:hover ul li:nth-child(2)
-{
-    transition-delay: .6s;
-}
-
-.img-wrapper:hover ul li:nth-child(3)
-{
-    transition-delay: .8s;
-}
-
-.img-wrapper:hover ul li:nth-child(4)
-{
-    transition-delay: 1s;
-}
 :root{
     --greeny: #99A267;
 }
@@ -243,4 +226,28 @@ div.mep{
     z-index: 11;
     margin-block-start: 10em;
 }
-
+.witch-of-the-month{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.pas-d\'inspi{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 100px;
+    text-align: center;
+}
+.witch-descript{
+    padding-left: 50px;
+    margin-top: 130px;
+}
+.barre-de-separation{
+    border:solid;
+    border-color: black;
+    width: 500px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
