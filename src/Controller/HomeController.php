@@ -26,7 +26,7 @@ class HomeController extends AbstractController
         $witchManager = new WitchManager();
         $witches = $witchManager->selectAll();
         $witches['GROUP_CONCAT(attribute.name)'] = explode(',', $witches['GROUP_CONCAT(attribute.name)']);
-        return $this->twig->render('Home/index.html.twig',[
+        return $this->twig->render('Home/index.html.twig', [
             'witches' => $witches,
         ]);
     }
