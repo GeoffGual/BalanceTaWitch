@@ -1,29 +1,150 @@
-.steps {
-    display: flex;
-    flex-direction: row;
-    width:100%;
+:root{
+    --greeny: #99A267;
+}
+
+body{
+    overflow-x: hidden;
     margin: 0;
+}
+
+.view,body,html{height:100%}
+.navbar{background-color:rgba(0,0,0,0)}
+.page-footer,.top-nav-collapse{background-color:#1C2331}
+
+@media only screen and (max-width:768px) {.navbar{background-color: gray}}
+
+a.nav-link.rounded{
+    border: 1px solid lightgrey;
+}
+
+a.nav-link.rounded:hover {
+    background-color: chocolate;
+    color: black;
+    border: chocolate;
+}
+
+a.navbar-brand{
+    font-size: 2vw;
+}
+
+a.nav-link{
+    color: #7A2B00;
+    font-weight: 400;
+    font-size: 1.05vw;
+}
+
+a.nav-link.balance{
+    color: white;
+}
+
+a.nav-link:hover{
+    color: whitesmoke;
+}
+
+a.nav-link.balance.rounded{
+    font-size: 1.5vw;
+    /*background-color: #b2f7ad;*/
+    background-color: #FECAAE;
+    color: #2d2d2d;
+    border-style: none;
+}
+
+a.nav-link.balance.rounded:hover{
+    /*background-color: #ffd09e;*/
+    background-color: #ff5805;
+}
+
+strong{
+    color: white;
+}
+
+.homepage{
+    position: absolute;
+    z-index: 1;
+}
+
+button.jebalance{
+    position: relative;
+    z-index: 10;
+    background-color: var(--greeny);
+    height: 70px;
+    width: 450px;
+    border-radius: 50px;
+    border: 1px solid #5F653E;
+    font-size: 2.2vw;
 
 }
-.steps_bottom{
+button.jebalance:hover{
+    color: whitesmoke;
+}
+
+
+div.mep{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    margin-top: 200px;
+    margin-top: 2em;
+}
+
+.quote{
+    position: relative;
+    z-index: 2;
+    font-size: 5vw;
+    font-weight:800;
+    width: 42%;
+    color: #7A2B00;
+    padding: 1.5em 0 0 1em;
+}
+
+.quotation{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
 }
-.steps_top{
+
+.fond{
+    position: relative;
+    z-index: 10;
+    margin-block-start: 4em;
+}
+
+.fond-vert{
+    position: relative;
+    z-index: 11;
+}
+
+.info{
+    margin-inline-start: 6.5em;
+}
+
+div.witch-of-the-month{
+    position: absolute;
+    z-index: 11;
+}
+
+
+
+.witch-of-the-month{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
-.steps_img{
-    height: 150px;
-    width: 150px;
+.pas-inspi{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 100px;
+    text-align: center;
 }
+.witch-descript{
+    padding-left: 50px;
+    margin-top: 130px;
+}
+
 .top_to_bottom{
     border: solid;
     -moz-transform: rotate(45deg);
@@ -36,9 +157,6 @@
     border-color: #a0a0a0;
     -moz-transform: rotate(-45deg);
 }
-
-
-
 
 
 .image-area
@@ -137,117 +255,4 @@
 .img-wrapper:hover ul li
 {
     transform: perspective(800px) rotateY(0deg);
-}
-
-
-:root{
-    --greeny: #99A267;
-}
-
-body{
-    overflow-x: hidden;
-    margin: 0;
-    background: #1C2331;
-}
-
-.view,body,html{height:100%}
-.navbar{background-color:rgba(0,0,0,0)}
-.page-footer,.top-nav-collapse{background-color:#1C2331}
-
-@media only screen and (max-width:768px) {.navbar{background-color: gray}}
-
-a.nav-link.rounded{
-    border: 1px solid lightgrey;
-}
-
-a.nav-link.rounded:hover {
-    background-color: chocolate;
-    color: black;
-    border: chocolate;
-}
-
-.nav-link{
-    font-size: 1.1vw;
-}
-
-a.navbar-brand{
-    font-size: 2vw;
-}
-
-a.nav-link{
-    color: lightgray;
-}
-
-a.nav-link:hover{
-    color: whitesmoke;
-}
-
-strong{
-    color: white;
-}
-
-.homepage{
-    position: absolute;
-    z-index: 1;
-}
-
-button.jebalance{
-    position: relative;
-    z-index: 10;
-    background-color: var(--greeny);
-    height: 70px;
-    width: 450px;
-    border-radius: 50px;
-    border: 1px solid #5F653E;
-    font-size: 2.2vw;
-
-}
-button.jebalance:hover{
-    color: whitesmoke;
-}
-
-
-div.mep{
-    display: flex;
-    justify-content: center;
-    padding-block-start: 26em;
-    flex-direction: column;
-    align-items: center;
-}
-
-.fond{
-    position: relative;
-    z-index: 10;
-    margin-block-start: 7em;
-}
-
-.fond-vert{
-    position: relative;
-    z-index: 11;
-    margin-block-start: 10em;
-}
-.witch-of-the-month{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 100px;
-}
-.pas-d\'inspi{
-    display: flex;
-    flex-direction: row-reverse;
-    margin-top: 100px;
-    text-align: center;
-}
-.witch-descript{
-    padding-left: 50px;
-    margin-top: 130px;
-}
-.barre-de-separation{
-    border:solid;
-    border-color: black;
-    width: 500px;
-    margin-top: 150px;
-    margin-bottom: 150px;
 }
