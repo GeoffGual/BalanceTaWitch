@@ -5,7 +5,6 @@
 body{
     overflow-x: hidden;
     margin: 0;
-    background: #1C2331;
 }
 
 .view,body,html{height:100%}
@@ -24,20 +23,35 @@ a.nav-link.rounded:hover {
     border: chocolate;
 }
 
-.nav-link{
-    font-size: 1.1vw;
-}
-
 a.navbar-brand{
     font-size: 2vw;
 }
 
 a.nav-link{
-    color: lightgray;
+    color: #7A2B00;
+    font-weight: 400;
+    font-size: 1.05vw;
+}
+
+a.nav-link.balance{
+    color: white;
 }
 
 a.nav-link:hover{
     color: whitesmoke;
+}
+
+a.nav-link.balance.rounded{
+    font-size: 1.5vw;
+    /*background-color: #b2f7ad;*/
+    background-color: #ffd09e;
+    color: #2d2d2d;
+    border-style: none;
+}
+
+a.nav-link.balance.rounded:hover{
+    /*background-color: #ffd09e;*/
+    background-color: #ff5805;
 }
 
 strong{
@@ -73,10 +87,29 @@ div.mep{
     align-items: center;
 }
 
+.quote{
+    position: relative;
+    z-index: 2;
+    font-size: 5vw;
+    font-weight:800;
+    width: 42%;
+    color: crimson;
+    padding: 1em 0 0 1em;
+}
+
+.quotation{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+
 .fond{
     position: relative;
     z-index: 10;
-    margin-block-start: 7em;
+    margin-block-start: 6em;
 }
 
 .fond-vert{
