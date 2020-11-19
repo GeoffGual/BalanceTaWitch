@@ -1,6 +1,16 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Hello Wilder !</h1>
-    {% include '/Home/modal.html.twig'%}
+
+    <img class="homepage" src="/assets/images/witch.jpg" alt="sorcière" width="100%">
+    <div class="mep">
+
+    <img class="fond" src="/assets/images/fondblanc.svg" alt="fond" width="100%">
+        <img class="fond-vert" src="/assets/images/fondvert.svg" alt="fond" width="100%">
+    </div>
+    <div>
+        <td> <img class="btn" onclick="popup()" style="width:100px; height:100px; border-radius:4px;" src="upload/<?php echo $row['image'];?>"></img></td>
+    </div>
+    {{ dump(witches) }}
+
 {% endblock %}
