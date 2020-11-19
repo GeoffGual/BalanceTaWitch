@@ -6,7 +6,16 @@
     <div class="mep">
 
     <img class="fond" src="/assets/images/fondblanc.svg" alt="fond" width="100%">
+
         <img class="fond-vert" src="/assets/images/fondvert.svg" alt="fond" width="100%">
+
+        {% include '/Home/_steps.html.twig'%}
+        <div class="barre-de-separation"></div>
+        {% include '/Home/_monthWitch.html.twig' %}
+        <img class="fond-vert" src="/assets/images/fondvert.svg" alt="fond" width="100%">
+    </div>
+
+
     </div>
     <div>
         <td> <img class="btn" onclick="popup()" style="width:100px; height:100px; border-radius:4px;" src="upload/<?php echo $row['image'];?>"></img></td>
@@ -14,3 +23,4 @@
     {{ dump(witches) }}
 
 {% endblock %}
+

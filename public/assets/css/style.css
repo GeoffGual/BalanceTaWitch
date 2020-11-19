@@ -1,3 +1,145 @@
+.steps {
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    margin: 0;
+
+}
+.steps_bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 200px;
+
+}
+.steps_top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 200px;
+}
+.steps_img{
+    height: 150px;
+    width: 150px;
+}
+.top_to_bottom{
+    border: solid;
+    -moz-transform: rotate(45deg);
+    border-color: #a0a0a0;
+
+
+}
+.bottom_to_top{
+    border:solid;
+    border-color: #a0a0a0;
+    -moz-transform: rotate(-45deg);
+}
+
+
+
+
+
+.image-area
+{
+    display: flex;
+    justify-content: center;
+}
+
+.img-wrapper
+{
+    display: flex;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.img-wrapper:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 180%;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,.3);
+    z-index: 1;
+    transform: skew(45deg);
+    transition: .5s;
+}
+
+.img-wrapper:hover:before
+{
+    left: -180%;
+}
+
+.img-wrapper img
+{
+    height: 400px;
+    width: 300px;
+    filter: grayscale(0%);
+    transition: 2s;
+}
+.img-wrapper:hover img
+{
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+
+.img-wrapper h2
+{
+    background: black;
+    font-family: Poppins;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: perspective(400px) rotateY(90deg);
+    transform-origin: right;
+
+}
+
+.img-wrapper:hover h2
+{
+    transform: perspective(400px) rotateY(0deg);
+}
+
+.img-wrapper ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: rgba(255,255,255,0);
+}
+
+.img-wrapper ul li
+{
+    background: darkred;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    transform: perspective(800px) rotateY(90deg);
+    transition: .5s;
+    transform-origin: left;
+}
+
+.img-wrapper:hover ul li
+{
+    transform: perspective(800px) rotateY(0deg);
+}
+
+
 :root{
     --greeny: #99A267;
 }
@@ -89,3 +231,28 @@ div.mep{
     margin-block-start: 10em;
 }
 
+.witch-of-the-month{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.pas-d\'inspi{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 100px;
+    text-align: center;
+}
+.witch-descript{
+    padding-left: 50px;
+    margin-top: 130px;
+}
+.barre-de-separation{
+    border:solid;
+    border-color: black;
+    width: 500px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
