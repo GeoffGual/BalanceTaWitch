@@ -1,6 +1,6 @@
 $(window).scroll(function () {
     if ($(window).scrollTop() >= 450) {
-        $('.navbar').css('background','#8e8e8e');
+        $('.navbar').css('background','#FECAAE');
         $('.nav-link').css('color','#2d2d2d');
         $('.balance').css('color','#2d2d2d');
     } else {
