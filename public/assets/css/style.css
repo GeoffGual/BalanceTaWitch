@@ -8,6 +8,11 @@ body{
 .view,body,html{height:100%}
 .navbar{background-color:rgba(0,0,0,0)}
 .page-footer,.top-nav-collapse{background-color:#1C2331}
+
+.modal-content{
+    background-image: url("https://i.postimg.cc/26n0FZTY/papierancien.jpg");
+    opacity: 0.7;
+}
 @media only screen and (max-width:768px) {.navbar{background-color: gray}}
 a.nav-link.rounded{
     border: 1px solid lightgrey;
@@ -53,7 +58,6 @@ a.nav-link.balance.rounded:hover{
     background-color: #ff5805;
 }
 
->>>>>>> dev
 strong{
     color: white;
 }
