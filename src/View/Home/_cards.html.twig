@@ -1,15 +1,21 @@
 {% block content %}
 <div class="infocardContainer ">
-        <div class="row align-items-start">
+        <div class="row align-items-start" id="vote">
     {%  for witch in witches %}
         <div class="col-lg-3 col-md-4 col-sm-12 my-5">
             <div class="card">
                 <div class="imgBx">
                     <img src="/assets/images/{{ witch.photo }}">
                 </div>
+                <form action="/home/addlike" method="POST" id="insert_form">
+                <button type="submit" class="btn btn-primary" name="id" value="{{ witch.id }}">Denunce</button>
+                </form>
                 <div class="details">
-                    <h2>{{ witch.firstname }}<br><span>{{ witch.lastname }}<br>description: {{witch.attributs}}<br></span></h2>
+                    <h2>{{ witch.firstname }}<br><span>{{ witch.lastname }}<br>description: {{witch.attributs}}<br>votes : {{ witch.counter }}</span></h2>
                 </div>
+                <form action="/home/deletelike" method="POST" id="insert_form">
+                    <button type="submit" class="btn btn-primary" name="id" value="{{ witch.id }}">Denunce</button>
+                </form>
             </div>
         </div>
     {%  endfor %}
