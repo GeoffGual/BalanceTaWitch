@@ -247,6 +247,7 @@ div.witch-of-the-month{
 {
     transform: perspective(800px) rotateY(0deg);
 }
+<<<<<<< HEAD
 :root{
     --greeny: #99A267;
 }
@@ -457,4 +458,6 @@ div.mep{
     flex-direction: row;
 }
 
+=======
+>>>>>>> dca2f14c39b56c95e42e72b621ecc10854f2d7c5
 

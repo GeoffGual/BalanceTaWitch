@@ -10,7 +10,7 @@ class WitchAttributeManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
 
-    public function insertAttribute($attribute, $idwitch)
+    public function insertAttribute($attribute,$idwitch)
     {
         $statement = $this->pdo->prepare(" INSERT INTO witch_attribute (`witch_id`, `attribute_id`)
         VALUES (:witch_id,:attribute_id)");
@@ -18,8 +18,9 @@ class WitchAttributeManager extends AbstractManager
         $statement->bindValue('attribute_id', $attribute, \PDO::PARAM_INT);
         $statement->bindValue('witch_id', $idwitch, \PDO::PARAM_INT);
 
-        if ($statement->execute()) {
+        if($statement->execute()){
             return (int)$this->pdo->lastInsertId();
         }
-    }
+        }
+
 }

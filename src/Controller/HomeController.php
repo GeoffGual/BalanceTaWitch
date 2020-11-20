@@ -9,7 +9,7 @@
 
 namespace App\Controller;
 
-use App\Model\CardManager;
+
 use App\Model\AttributeManager;
 use App\Model\Witch_AttributeManager;
 use App\Model\WitchAttributeManager;
@@ -49,12 +49,11 @@ class HomeController extends AbstractController
             ];
             $witchAttributeManager = new WitchAttributeManager();
             $attributes = $_POST['attribute'];
-
-            $idwitch = $witchManager->insert($witch);
+            $idwitch = ($witchManager->insert($witch));
             foreach ($attributes as $attribute) {
                 $witchAttributeManager->insertAttribute($attribute, $idwitch);
             }
-            header('location: /');
+
         }
     }
 }

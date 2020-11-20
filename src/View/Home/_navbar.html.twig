@@ -17,11 +17,9 @@
             </ul>
             <ul class="navbar-nav nav-flex-icons">
                 <li class="nav-item">
-
                     <a data-toggle="modal" data-target="#exampleModal" class="nav-link rounded"
                        target="_blank">
                         <i class="fab fa-github mr-1"></i> Je balance !
-
                     </a>
                 </li>
             </ul>
@@ -49,8 +47,8 @@
                     </div>
                     <div>
                         {% for attribute in attributes %}
-                        <label for="" class="col-form-label">{{ attribute.name }}</label>
-                        <input type="checkbox" name="attribute[]" value="  {{ attribute.id }}">
+                        <label for="attribute" class="col-form-label">{{ attribute.name }}</label>
+                        <input type="checkbox" name="attribute[]" value="{{ attribute.id }}>
                         {% endfor %}
                     </div>
                     <div class="modal-footer">
