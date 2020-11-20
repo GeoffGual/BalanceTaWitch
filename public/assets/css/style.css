@@ -157,8 +157,6 @@ div.witch-of-the-month{
     border-color: #a0a0a0;
     -moz-transform: rotate(-45deg);
 }
-
-
 .image-area
 {
     display: flex;
@@ -242,7 +240,7 @@ div.witch-of-the-month{
 
 .img-wrapper ul li
 {
-    background: darkred;
+    background: crimson;
     height: 40px;
     width: 40px;
     text-align: center;
@@ -256,3 +254,213 @@ div.witch-of-the-month{
 {
     transform: perspective(800px) rotateY(0deg);
 }
+
+:root{
+    --greeny: #99A267;
+}
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    background: #1C2331;
+}
+
+.view,body,html{height:100%}
+.navbar{background-color:rgba(0,0,0,0)}
+.page-footer,.top-nav-collapse{background-color:#1C2331}
+
+@media only screen and (max-width:768px) {.navbar{background-color: gray}}
+
+a.nav-link.rounded{
+    border: 1px solid lightgrey;
+}
+
+a.nav-link.rounded:hover {
+    background-color: chocolate;
+    color: black;
+    border: chocolate;
+}
+
+.nav-link{
+    font-size: 1.1vw;
+}
+
+a.navbar-brand{
+    font-size: 2vw;
+}
+
+a.nav-link{
+    color: lightgray;
+}
+
+a.nav-link:hover{
+    color: whitesmoke;
+}
+
+strong{
+    color: white;
+}
+
+.homepage{
+    position: absolute;
+    z-index: 1;
+}
+
+button.jebalance{
+    position: relative;
+    z-index: 10;
+    background-color: var(--greeny);
+    height: 70px;
+    width: 450px;
+    border-radius: 50px;
+    border: 1px solid #5F653E;
+    font-size: 2.2vw;
+
+}
+button.jebalance:hover{
+    color: whitesmoke;
+}
+
+
+div.mep{
+    display: flex;
+    justify-content: center;
+    padding-block-start: 26em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fond{
+    position: relative;
+    z-index: 10;
+    margin-block-start: 7em;
+}
+
+.fond-vert{
+    position: relative;
+    z-index: 11;
+    margin-block-start: 10em;
+}
+.witch-of-the-month{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.pas-d\'inspi{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 100px;
+    text-align: center;
+}
+.witch-descript{
+    padding-left: 50px;
+    margin-top: 130px;
+}
+.barre-de-separation{
+    border:solid;
+    border-color: black;
+    width: 500px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+.rewards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+    margin: 0 auto;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: darkred;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+.card:before,
+.card:after
+{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #110f10;
+    transition: 0.5s;
+    z-index:-1;
+}
+.card:hover:before{
+    transform: rotate(20deg);
+    box-shadow: 0 2px 20px rgba(0,0,0,.2);
+}
+.card:hover:after{
+    transform: rotate(10deg);
+    box-shadow: 0 2px 20px rgba(0,0,0,.2);
+}
+.card .imgBx{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: #222;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.card:hover .imgBx
+{
+    bottom: 80px;
+}
+
+.card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .details{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 60px;
+    text-align: center;
+}
+
+.card .details h2{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.card .details h2 span{
+    font-weight: 500;
+    font-size: 14px;
+    color: #777;
+    display: block;
+    margin-top: 5px;
+}
+.infocardContainer{
+    display: flex;
+    flex-direction: row;
+}
+

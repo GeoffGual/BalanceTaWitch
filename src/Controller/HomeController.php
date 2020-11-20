@@ -9,6 +9,8 @@
 
 namespace App\Controller;
 
+use App\Model\CardManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -21,6 +23,10 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $cardManager = new CardManager('witch');
+        $witch = $cardManager->selectNameFirstnameImage();
+        return $this->twig->render('Home/index.html.twig', [
+            'witches' => $witch
+        ]);
     }
 }
