@@ -11,7 +11,6 @@ namespace App\Controller;
 
 
 use App\Model\AttributeManager;
-use App\Model\Witch_AttributeManager;
 use App\Model\WitchAttributeManager;
 use App\Model\WitchManager;
 class HomeController extends AbstractController
@@ -31,10 +30,11 @@ class HomeController extends AbstractController
         $attributeManager = new AttributeManager();
         $attributes = $attributeManager->selectAll();
 
-        return $this->twig->render('Home/index.html.twig', [
+        return $this->twig->render('/Home/index.html.twig', [
             'witches' => $witches,
             'attributes' => $attributes,
         ]);
+        header('Location: /');
     }
 
     public function add()
@@ -53,7 +53,7 @@ class HomeController extends AbstractController
             foreach ($attributes as $attribute) {
                 $witchAttributeManager->insertAttribute($attribute, $idwitch);
             }
-
+            header('Location: /');
         }
     }
 }
