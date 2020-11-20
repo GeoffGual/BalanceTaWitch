@@ -1,32 +1,32 @@
 :root{
     --greeny: #99A267;
 }
-
 body{
     overflow-x: hidden;
     margin: 0;
 }
-
 .view,body,html{height:100%}
 .navbar{background-color:rgba(0,0,0,0)}
 .page-footer,.top-nav-collapse{background-color:#1C2331}
-
 @media only screen and (max-width:768px) {.navbar{background-color: gray}}
-
 a.nav-link.rounded{
     border: 1px solid lightgrey;
 }
-
 a.nav-link.rounded:hover {
     background-color: chocolate;
     color: black;
     border: chocolate;
 }
 
+.nav-link{
+    font-size: 1.1vw;
+}
+
+
+
 a.navbar-brand{
     font-size: 2vw;
 }
-
 a.nav-link{
     color: #7A2B00;
     font-weight: 400;
@@ -36,7 +36,6 @@ a.nav-link{
 a.nav-link.balance{
     color: white;
 }
-
 a.nav-link:hover{
     color: whitesmoke;
 }
@@ -54,15 +53,14 @@ a.nav-link.balance.rounded:hover{
     background-color: #ff5805;
 }
 
+>>>>>>> dev
 strong{
     color: white;
 }
-
 .homepage{
     position: absolute;
     z-index: 1;
 }
-
 button.jebalance{
     position: relative;
     z-index: 10;
@@ -72,13 +70,10 @@ button.jebalance{
     border-radius: 50px;
     border: 1px solid #5F653E;
     font-size: 2.2vw;
-
 }
 button.jebalance:hover{
     color: whitesmoke;
 }
-
-
 div.mep{
     display: flex;
     justify-content: center;
@@ -103,13 +98,11 @@ div.mep{
     flex-direction: column;
 
 }
-
 .fond{
     position: relative;
     z-index: 10;
     margin-block-start: 4em;
 }
-
 .fond-vert{
     position: relative;
     z-index: 11;
@@ -256,5 +249,4 @@ div.witch-of-the-month{
 {
     transform: perspective(800px) rotateY(0deg);
 }
-
 
