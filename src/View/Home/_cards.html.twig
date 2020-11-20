@@ -1,6 +1,7 @@
 {% block content %}
 <div class="infocardContainer ">
-        <div class="row align-items-start mx-2">
+        <div class="row align-items-start mx-2" id="vote">
+
     {%  for witch in witches %}
         <div class="col-lg-3 col-md-4 col-sm-12 my-5">
             <div class="card-tf">
@@ -8,9 +9,16 @@
                     <img src="/assets/images/{{ witch.photo }}">
                 </div>
                 <div class="details">
-                    <h2>{{ witch.firstname }}<br><span>{{ witch.lastname }}<br>description: {{witch.attributs}}<br></span></h2>
-                    <button class="btn-danger">Go to the hell !</button>
-                    <button class="btn-primary">Save her !</button>
+                    <h2 class="pt-1 name">{{ witch.firstname }} {{ witch.lastname }}</h2>
+                    {{witch.attributs}} <br>Votes : {{ witch.counter }}</p>
+                    <div class="hell">
+                    <form action="/home/addlike" method="POST" id="insert_form">
+                        <button type="submit" class="btn btn-danger mx-3" name="id" value="{{ witch.id }}">Go to the hell !</button>
+                    </form>
+                    <form action="/home/deletelike" method="POST" id="insert_form">
+                        <button type="submit" class="btn btn-warning" name="id" value="{{ witch.id }}">Save her !</button>
+                    </form>
+                    </div>
                 </div>
 
             </div>

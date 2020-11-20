@@ -11,6 +11,7 @@ namespace App\Controller;
 
 
 use App\Model\AttributeManager;
+use App\Model\CardManager;
 use App\Model\WitchAttributeManager;
 use App\Model\WitchManager;
 class HomeController extends AbstractController
@@ -55,5 +56,25 @@ class HomeController extends AbstractController
             }
             header('Location: /');
         }
+    }
+    public function addlike()
+    {
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $witchid = $_POST['id'];
+            $cardManager = new CardManager('witch');
+            $cardManager->addLike($witchid);
+        }
+        header('location:/#vote');
+    }
+    public function deletelike()
+    {
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $witchid = $_POST['id'];
+            $cardManager = new CardManager('witch');
+            $cardManager->deleteLike($witchid);
+        }
+        header('location:/#vote');
     }
 }

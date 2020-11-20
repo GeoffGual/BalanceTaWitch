@@ -67,7 +67,6 @@ a.nav-link.balance.rounded:hover{
     /*background-color: #ffd09e;*/
     background-color: #ff5805;
 }
-
 strong{
     color: white;
 }
@@ -262,7 +261,19 @@ div.witch-of-the-month{
 {
     transform: perspective(800px) rotateY(0deg);
 }
+:root{
+    --greeny: #99A267;
+}
 
+body{
+    overflow-x: hidden;
+    margin: 0;
+    background: #1C2331;
+}
+
+.view,body,html{height:100%}
+.navbar{background-color:rgba(0,0,0,0)}
+.page-footer,.top-nav-collapse{background-color:#1C2331}
 @media only screen and (max-width:768px) {.navbar{background-color: gray}}
 
 a.nav-link.rounded{
@@ -508,4 +519,13 @@ div.witch-of-the-month{
 .card-text{
     font-size: 2vw;
     font-weight: 500;
+}
+
+.hell{
+    display: flex;
+    flex-direction: row;
+}
+
+h2.pt-1.name{
+color: #AB2E17;
 }
