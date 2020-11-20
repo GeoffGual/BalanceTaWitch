@@ -4,7 +4,6 @@
 body{
     overflow-x: hidden;
     margin: 0;
-    background: #1C2331;
 }
 .view,body,html{height:100%}
 .navbar{background-color:rgba(0,0,0,0)}
@@ -18,18 +17,43 @@ a.nav-link.rounded:hover {
     color: black;
     border: chocolate;
 }
+
 .nav-link{
     font-size: 1.1vw;
 }
+
+
+
 a.navbar-brand{
     font-size: 2vw;
 }
 a.nav-link{
-    color: lightgray;
+    color: #7A2B00;
+    font-weight: 400;
+    font-size: 1.05vw;
+}
+
+a.nav-link.balance{
+    color: white;
 }
 a.nav-link:hover{
     color: whitesmoke;
 }
+
+a.nav-link.balance.rounded{
+    font-size: 1.5vw;
+    /*background-color: #b2f7ad;*/
+    background-color: #FECAAE;
+    color: #2d2d2d;
+    border-style: none;
+}
+
+a.nav-link.balance.rounded:hover{
+    /*background-color: #ffd09e;*/
+    background-color: #ff5805;
+}
+
+>>>>>>> dev
 strong{
     color: white;
 }
@@ -53,19 +77,177 @@ button.jebalance:hover{
 div.mep{
     display: flex;
     justify-content: center;
-    padding-block-start: 26em;
     flex-direction: column;
     align-items: center;
+    margin-top: 2em;
+}
+
+.quote{
+    position: relative;
+    z-index: 2;
+    font-size: 5vw;
+    font-weight:800;
+    width: 42%;
+    color: #7A2B00;
+    padding: 1.5em 0 0 1em;
+}
+
+.quotation{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
 }
 .fond{
     position: relative;
     z-index: 10;
-    margin-block-start: 7em;
+    margin-block-start: 4em;
 }
 .fond-vert{
     position: relative;
     z-index: 11;
-    margin-block-start: 10em;
+}
+
+.info{
+    margin-inline-start: 6.5em;
+}
+
+div.witch-of-the-month{
+    position: absolute;
+    z-index: 11;
+}
+
+
+
+.witch-of-the-month{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.pas-inspi{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 100px;
+    text-align: center;
+}
+.witch-descript{
+    padding-left: 50px;
+    margin-top: 130px;
+}
+
+.top_to_bottom{
+    border: solid;
+    -moz-transform: rotate(45deg);
+    border-color: #a0a0a0;
+
+
+}
+.bottom_to_top{
+    border:solid;
+    border-color: #a0a0a0;
+    -moz-transform: rotate(-45deg);
+}
+
+
+.image-area
+{
+    display: flex;
+    justify-content: center;
+}
+
+.img-wrapper
+{
+    display: flex;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.img-wrapper:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 180%;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,.3);
+    z-index: 1;
+    transform: skew(45deg);
+    transition: .5s;
+}
+
+.img-wrapper:hover:before
+{
+    left: -180%;
+}
+
+.img-wrapper img
+{
+    height: 400px;
+    width: 300px;
+    filter: grayscale(0%);
+    transition: 2s;
+}
+.img-wrapper:hover img
+{
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+
+.img-wrapper h2
+{
+    background: black;
+    font-family: Poppins;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: perspective(400px) rotateY(90deg);
+    transform-origin: right;
+
+}
+
+.img-wrapper:hover h2
+{
+    transform: perspective(400px) rotateY(0deg);
+}
+
+.img-wrapper ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: rgba(255,255,255,0);
+}
+
+.img-wrapper ul li
+{
+    background: darkred;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    transform: perspective(800px) rotateY(90deg);
+    transition: .5s;
+    transform-origin: left;
+}
+
+.img-wrapper:hover ul li
+{
+    transform: perspective(800px) rotateY(0deg);
 }
 .modal-content {
     background-image: url(/public/assets/images/);
