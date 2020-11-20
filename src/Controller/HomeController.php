@@ -10,7 +10,10 @@
 namespace App\Controller;
 
 use App\Model\CardManager;
-
+use App\Model\AttributeManager;
+use App\Model\Witch_AttributeManager;
+use App\Model\WitchAttributeManager;
+use App\Model\WitchManager;
 class HomeController extends AbstractController
 {
     /**
@@ -23,10 +26,35 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        $cardManager = new CardManager('witch');
-        $witch = $cardManager->selectNameFirstnameImage();
+        $witchManager = new WitchManager();
+        $witches = $witchManager->selectAll();
+        $attributeManager = new AttributeManager();
+        $attributes = $attributeManager->selectAll();
+
         return $this->twig->render('Home/index.html.twig', [
-            'witches' => $witch
+            'witches' => $witches,
+            'attributes' => $attributes,
         ]);
+    }
+
+    public function add()
+    {
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $witchManager = new WitchManager();
+            $witch = [
+                'firstname' => $_POST['firstname'],
+                'lastname' => $_POST['lastname'],
+
+            ];
+            $witchAttributeManager = new WitchAttributeManager();
+            $attributes = $_POST['attribute'];
+
+            $idwitch = $witchManager->insert($witch);
+            foreach ($attributes as $attribute) {
+                $witchAttributeManager->insertAttribute($attribute, $idwitch);
+            }
+            header('location: /');
+        }
     }
 }

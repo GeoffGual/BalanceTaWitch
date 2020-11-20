@@ -1,12 +1,9 @@
 <nav class="navbar fixed-top navbar-expand-lg">
     <div class="container-fluid">
-
         <a class="navbar-brand" href="#">
             <strong>Balance ta Witch</strong>
         </a>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
             <ul class="navbar-nav mr-auto ml-3">
                 <li class="nav-item">
                     <a class="nav-link pt-3" href="#">JUGER</a>
@@ -18,15 +15,50 @@
                     <a class="nav-link pt-3" href="#">TROPHÉS</a>
                 </li>
             </ul>
-
             <ul class="navbar-nav nav-flex-icons">
                 <li class="nav-item">
-                    <a href="#" class="nav-link balance rounded">
-                        <b>Je balance !</b>
+
+                    <a data-toggle="modal" data-target="#exampleModal" class="nav-link rounded"
+                       target="_blank">
+                        <i class="fab fa-github mr-1"></i> Je balance !
+
                     </a>
                 </li>
             </ul>
-
         </div>
     </div>
 </nav>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New denunciation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/home/add" method="POST" id="insert_form">
+                    <div class="form-group">
+                        <label for="firstname" class="col-form-label">Firstname</label>
+                        <input type="text" name="firstname" class="form-control" id="firstname">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname" class="col-form-label">Lastname</label>
+                        <input type="text" name="lastname" class="form-control" id="lastname">
+                    </div>
+                    <div>
+                        {% for attribute in attributes %}
+                        <label for="" class="col-form-label">{{ attribute.name }}</label>
+                        <input type="checkbox" name="attribute[]" value="  {{ attribute.id }}">
+                        {% endfor %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Denunce</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
