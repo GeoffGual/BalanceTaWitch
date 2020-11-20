@@ -1,6 +1,7 @@
 :root{
     --greeny: #99A267;
 }
+
 body{
     overflow-x: hidden;
     margin: 0;
@@ -12,6 +13,10 @@ body{
 .modal-content{
     background-image: url("https://i.postimg.cc/26n0FZTY/papierancien.jpg");
     opacity: 0.7;
+}
+.modal-content button{
+    background-color: #AB2E17;
+    border-color: #AB2E17;
 }
 @media only screen and (max-width:768px) {.navbar{background-color: gray}}
 a.nav-link.rounded{
@@ -27,14 +32,12 @@ a.nav-link.rounded:hover {
     font-size: 1.1vw;
 }
 
-
-
 a.navbar-brand{
     font-size: 2vw;
 }
-a.nav-link{
+a.nav-link.pt-3{
     color: #7A2B00;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.05vw;
 }
 
@@ -51,6 +54,7 @@ a.nav-link.balance.rounded{
     background-color: #FECAAE;
     color: #2d2d2d;
     border-style: none;
+    font-weight: 600;
 }
 
 a.nav-link.balance.rounded:hover{
@@ -319,15 +323,27 @@ button.jebalance:hover{
 div.mep{
     display: flex;
     justify-content: center;
-    padding-block-start: 26em;
     flex-direction: column;
     align-items: center;
 }
 
+div.infocardContainer{
+    position: absolute;
+    z-index: 11;
+    margin-block-start: 15em;
+}
+
+
 .fond{
     position: relative;
     z-index: 10;
-    margin-block-start: 7em;
+}
+
+.guilty{
+    position: absolute;
+    z-index: 30;
+    padding-block-start: 13em;
+    margin-inline-start: 18em;
 }
 
 .fond-vert{
@@ -343,7 +359,7 @@ div.mep{
     text-align: center;
     margin-bottom: 100px;
 }
-.pas-d\'inspi{
+.pas-dinspi{
     display: flex;
     flex-direction: row-reverse;
     margin-top: 100px;

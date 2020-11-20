@@ -1,4 +1,3 @@
-
 {% extends 'layout.html.twig' %}
 {% block content %}
 
@@ -9,17 +8,14 @@
         <img class="info" src="/assets/images/info.svg" alt="infography" width="85%">
     </div>
 
+    <h2 class="guilty" id="judge">GUILTY OR NOT GUILTY ?</h2>
     <div class="mep">
         <img class="fond-vert" src="/assets/images/fondorange.svg" alt="fond" width="100%">
+        {% include '/Home/_cards.html.twig' %}
 
-        {% include '/Home/_monthWitch.html.twig' %}
     </div>
-
-
     <img class="fond" src="/assets/images/fondblanc.svg" alt="fond" width="100%">
-
-
-    {% include '/Home/_cards.html.twig' %}
+    {% include '/Home/_monthWitch.html.twig' %}
 {% endblock %}
 
 
