@@ -18,6 +18,9 @@
 </header>
 <body>
 {% block content %}{% endblock %}
+{% block footer %}
+    {% include '/Home/_footer.html.twig' %}
+{% endblock %}
 
 {% block javascript %}{% endblock %}
 
