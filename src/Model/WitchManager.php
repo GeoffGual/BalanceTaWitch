@@ -13,11 +13,11 @@ class WitchManager extends AbstractManager
 
     public function selectAll(): array
     {
-        return $this->pdo->query('SELECT witch.firstname, witch.lastname, witch.counter, GROUP_CONCAT(attribute.name)
+        return $this->pdo->query('SELECT witch.photo, witch.reward, witch.firstname, witch.lastname, witch.counter, GROUP_CONCAT(attribute.name) as attributs
             FROM ' . self::TABLE . '
             JOIN witch_attribute ON witch.id = witch_attribute.witch_id
             JOIN attribute ON attribute.id = witch_attribute.attribute_id
-            GROUP BY witch.id;')->fetch();
+            GROUP BY witch.id;')->fetchAll();
     }
 
     public function insert(array $witch)

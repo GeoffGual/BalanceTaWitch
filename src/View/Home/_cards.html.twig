@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+<div class="infocardContainer ">
+        <div class="row align-items-start">
+    {%  for witch in witches %}
+        <div class="col-lg-3 col-md-4 col-sm-12 my-5">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="/assets/images/{{ witch.photo }}">
+                </div>
+                <div class="details">
+                    <h2>{{ witch.firstname }}<br><span>{{ witch.lastname }}<br>description: {{witch.attributs}}<br>reward: {{ witch.reward }}$$$</span></h2>
+                </div>
+            </div>
+        </div>
+    {%  endfor %}
+        </div>
+</div>
+{% endblock %}
