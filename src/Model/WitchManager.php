@@ -22,8 +22,8 @@ class WitchManager extends AbstractManager
 
     public function insert(array $witch)
     {
-        $statement = $this->pdo->prepare(" INSERT INTO witch(`firstname`, `lastname`) 
-        VALUES (:firstname, :lastname) ");
+        $statement = $this->pdo->prepare(" INSERT INTO witch(`firstname`, `lastname`,photo) 
+        VALUES (:firstname, :lastname, 'sorciereupload.jpg') ");
 
         $statement->bindValue('firstname', $witch['firstname'], \PDO::PARAM_STR);
         $statement->bindValue('lastname', $witch['lastname'], \PDO::PARAM_STR);
