@@ -9,6 +9,9 @@
 
 namespace App\Controller;
 
+use App\Model\AttributeManager;
+use App\Model\Witch_AttributeManager;
+use App\Model\WitchAttributeManager;
 use App\Model\WitchManager;
 
 class HomeController extends AbstractController
@@ -26,8 +29,34 @@ class HomeController extends AbstractController
         $witchManager = new WitchManager();
         $witches = $witchManager->selectAll();
         $witches['GROUP_CONCAT(attribute.name)'] = explode(',', $witches['GROUP_CONCAT(attribute.name)']);
+
+        $attributeManager = new AttributeManager();
+        $attributes = $attributeManager->selectAll();
+
         return $this->twig->render('Home/index.html.twig', [
             'witches' => $witches,
+            'attributes' => $attributes,
         ]);
+    }
+
+    public function add()
+    {
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $witchManager = new WitchManager();
+            $witch = [
+                'firstname' => $_POST['firstname'],
+                'lastname' => $_POST['lastname'],
+
+            ];
+            $witchAttributeManager = new WitchAttributeManager();
+            $attributes = $_POST['attribute'];
+
+            $idwitch = $witchManager->insert($witch);
+            foreach ($attributes as $attribute) {
+                $witchAttributeManager->insertAttribute($attribute, $idwitch);
+            }
+            header('location: /');
+        }
     }
 }
