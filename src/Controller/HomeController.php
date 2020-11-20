@@ -53,7 +53,7 @@ class HomeController extends AbstractController
             foreach ($attributes as $attribute) {
                 $witchAttributeManager->insertAttribute($attribute, $idwitch);
             }
-
+            header('location: /');
         }
     }
 }
